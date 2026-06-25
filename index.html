@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>petewat</title>
+    </head>
+    <body>
+        <div class="head-container">
+            <img id="profile" class="head-item" style="grid-area: A1; justify-self: center;" src="profile/0.JPG" alt="profile pic">
+            <h2 id="name" class="head-item" style="grid-area: A2; align-self: end;">PETEWAT CHAOHA</h2>
+            <p class="head-sub" style="grid-area: A4; font-size: 15px; margin-top: 0;">BE PRESENT. BE KIND. BE GRATEFUL.<br>
+            <span style="font-size: 20px">connect with me through <a href="https://www.instagram.com/petewat.c/">Instagram</a>, <a href="https://www.linkedin.com/in/petewat-chaoha-9849b8343/">LinkedIn</a>, <a href="https://github.com/petewat">Github</a><br>gmail: petewat.c@gmail.com.<br> Enjoy reading :)</a></p>
+            </span>
+            <p class="head-par" style="grid-area: A3;justify-self: center; margin-top: px">Hey, I'm Pete from Thailand! I'm an incoming cs student @ Columbia. This website is my personal online journal.<br>
+            I love doing anything outdoors (running, skiing, soccer, etc.), and solving (competitive programming) problems!</p></h2>
+        </div>
+        <div class="par-flex-container">
+            <div class="child-flex-container">
+                <h1 style="margin-bottom: 0">Random Thoughts</h1>
+                <h2 style="margin-bottom: 0">My first surgery at 19</h2>
+                <p style="margin-bottom: 0">6/24/2026</p>
+                <p id="sample-blog1"></p>
+                <a href="blogs/blog1/blog1.html">read more→</a>
+                <h2>TOPIC</h2>
+                <p>123/213/123</p>
+                <p>dfgijoisdjhshfsuhs</p>
+                <h2>TOPIC</h2>
+                <p>123/213/123</p>
+                <p>dfgijoisdjhshfsuhs</p>
+                <h2>TOPIC</h2>
+                <p>123/213/123</p>
+                <p>dfgijoisdjhshfsuhs</p>
+            </div>
+            <div class="child-grid-container">
+                <div class="item" style="grid-area: B1;">
+                    <h1>Competitive Programming</h1>
+                    <p>Bronze Medal, Asia Pacific Informatics Olympiad (APIO)</p>
+                    <p>USACO 2026 Platinum</p>
+                    <p>2-times finalist, Thailand Informatics Olympiad</p>
+                    <p>3-times Gold award, CALICO</p>
+                    <p>I'm on <a href="https://codeforces.com/profile/8pete8">Codeforces</a>, <a href="https://oj.uz/profile/8pete8">oj</a>, <a href="https://atcoder.jp/users/pete8">Atcoder</a>!</p>
+                    <p>goals: master on CF & ICPC world finals</p>
+                </div>
+                <div class="item" style="grid-area: B4;">
+                    <h1>Running</h1>
+                    <p>add me on <a hre="https://www.strava.com/athletes/36327984">Strava!</a></p>
+                    <p><a href="https://chattangames.edu.cmu.ac.th/">100m: 0:12.54</a><br><span style="float:right">11/08/2023</span></p>
+                    <p><a href="https://www.athletic.net/TrackAndField/meet/656744/results/m/1/800m">800m: 2:25.6</a><br><span style="float:right">04/18/2026</span></p>
+                    <p><a href="https://www.athletic.net/TrackAndField/meet/653083/results/m/1/1500m">1500m: 5:34.5</a><br><span style="float:right">04/11/2026</span></p>
+                    <p><a href="https://www.strava.com/activities/16184660503">5000m: 22:37</a> <br><span style="float:right">10/18/2025</span></p>
+                    <p><a href="https://connect.garmin.com/app/activity/21259119271">8000m: 35:13</a> <br><span style="float:right">12/14/2025</span></p>
+                    <p>goals: sub 20 5k & half marathon</p>
+                </div>
+                <div class="item" style="grid-area: B2;">
+                    <h1>Projects</h1>
+                    <p><a href="https://github.com/petewat/DSL">Domain Specific Language for Physics (vectors) →</a></p>
+                    <p><a href="https://github.com/petewat/http">http server from scratch with C →</p>
+                    <p><a href="https://petewat.github.io/cp-database/">Competitive Programming problems database →</a></p>
+                </div>
+                <div class="item" style="grid-area: B3;">
+                    <h1>Educations</h1>
+                    <p>chulalongkorn university demonstration<br>secondary school<span style="float:right">CUD 60</span><br>grade: 7-12th <span style="float:right">BKK, THA</span></p>
+                    <p>Kimball Union Academy<span style="float:right">KUA '26</span><br>grade: PG<span style="float:right">NH, USA</span></p>
+                    <p style="margin-bottom: 0;">Columbia University<br>class of 2030<span style="float:right">NY, USA</span></p>
+                </div>
+            </div>
+        </div>
+    <script>
+        let Name =document.getElementById("name");
+        const full_name="Petewat Chaoha.";
+        const nick_name="Pete.";
+        Name.innerHTML="";
+        let cur="";
+        function clear_name(callback){
+            const interval = setInterval(() =>{
+                Name.innerHTML=cur;
+                if(cur.length==0){
+                    clearInterval(interval);
+                    callback();
+                    return;
+                }
+                cur=cur.slice(0,-1);
+            },200);
+            
+        }
+        function write_full_name(){
+            cur="";
+            const interval = setInterval(() =>{
+                cur+=full_name[cur.length];
+                Name.innerHTML=cur;
+                if(cur.length>=full_name.length){
+                    clearInterval(interval);
+                    setTimeout(()=>clear_name(write_nick_name),2000);
+                    return;
+                }
+            },200);
+        }
+        function write_nick_name(){
+            cur="";
+            const interval = setInterval(() =>{
+                cur+=nick_name[cur.length];
+                Name.innerHTML=cur;
+                if(cur.length>=nick_name.length){
+                    clearInterval(interval);
+                    setTimeout(()=>clear_name(write_full_name),2000);
+                    return;
+                }
+            },400);
+        }
+        write_full_name();
+        let cp=1;
+        pic=document.getElementById("profile");
+        const interval = setInterval(() =>{
+            pic.src="profile/"+String(cp)+".JPG";
+            cp=(cp+1)%15;
+        },2000);
+        fetch('blogs/blog1/sample.txt').then(res=>res.text()).then(text=>{
+            document.getElementById("sample-blog1").innerText=text;
+        })
+        
+    </script>
+    </body>
+</html>

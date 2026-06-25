@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="blog1.css">
+        <title>blog1</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="grid-template-areas: A1;">My first surgery at 19</h1>
+            <p style="font-size: 20px; line-height: 2; grid-template-areas: A2;" id="writing"></p>
+            <a href="../../index.html " style="grid-template-areas: A3">← go back</a>
+            <img id="pic1" style="grid-area: A4; width: 200px; margin-top: 700px;" src="0.png" alt="profile pic">
+        </div>
+        <script>
+            fetch('blog1.txt').then(res=>res.text()).then(text=>{
+            document.getElementById("writing").innerText=text;
+            })
+        </script>
+    </body>
+</html>
