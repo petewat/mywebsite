@@ -1,8 +1,5 @@
 .container{
     display: grid;
-    grid-template-areas: "A1 A4"
-    "A2 A4"
-    "A3 A4";
     gap: 10px;
 }
 body{
